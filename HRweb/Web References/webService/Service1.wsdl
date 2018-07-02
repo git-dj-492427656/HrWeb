@@ -1,0 +1,4083 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Getlogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetloginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetloginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getlogindt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetlogindtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetlogindtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Fmsbankview_Net">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EASstart" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EASend" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="fmsmid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Fmsbankview_NetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Fmsbankview_NetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Fmsbankview_noNet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EASstart" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EASend" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="fmsmid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Fmsbankview_noNetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Fmsbankview_noNetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkflowlistMessagedt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rownum" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FormNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkflowlistMessagedtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWorkflowlistMessagedtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkflowlistMessagelistdt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="FormNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FormID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="billtable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="billtype" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkflowlistMessagelistdtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWorkflowlistMessagelistdtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCRMPricelistdt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="midfulltitle" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rownum" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="FormNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCRMPricelistdtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCRMPricelistdtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCRMPricedt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="projname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCRMPricedtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCRMPricedtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCRMPrice_zfdt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="projname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCRMPrice_zfdtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCRMPrice_zfdtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCRMPricetoCRM_Jsion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="projname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCRMPricetoCRM_JsionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCRMPricetoCRM_JsionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkflowlistsplistdt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FormNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FormID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Isold" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkflowlistsplistdtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWorkflowlistsplistdtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkflowlistspdt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FormNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FormID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="spcheck" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="sptxt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="billtable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nametitle" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkflowlistspdtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWorkflowlistspdtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getareatable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="areaname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetareatableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetareatableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getcustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetcustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetcustomerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getcustomerproject">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetcustomerprojectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetcustomerprojectResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDistance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Disnum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDistanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDistanceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getcontractstu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="coname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetcontractstuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetcontractstuResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getconstructionstu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetconstructionstuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetconstructionstuResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getcuscontract">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ccNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetcuscontractResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetcuscontractResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getcuscontractbyid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ccid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetcuscontractbyidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetcuscontractbyidResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cuscontractinto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ccNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ccType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cper" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cphoe" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="did" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Installationarea" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="specificarea" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="aid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="yjstartdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="yjenddate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="yjdatenum" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="beizhu" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="addPer" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cuscontractintoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cuscontractintoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cuscontractupdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ccNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ccType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cper" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cphoe" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="did" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Installationarea" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="specificarea" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="aid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="yjstartdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="yjenddate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="yjdatenum" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="beizhu" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="addPer" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ccid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cuscontractupdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cuscontractupdateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetcuscontractRbyid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ccid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetcuscontractRbyidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetcuscontractRbyidResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cuscontractRinto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ccid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="crNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="proType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pnum" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="did" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Rowfy" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="transportfy" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="otherfy" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="htAmount" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="addPer" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cuscontractRintoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cuscontractRintoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cuscontractRupdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ccid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="crNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="proType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pnum" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="did" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Rowfy" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="transportfy" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="otherfy" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="htAmount" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="addPer" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="crid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cuscontractRupdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cuscontractRupdateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetcuscontractbyStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="mid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="statusid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="checktrue" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetcuscontractbyStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetcuscontractbyStatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getcuscontractbyorderid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ccid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetcuscontractbyorderidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetcuscontractbyorderidResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getcuscontractupdatestatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ccid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ccNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="mid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Keystring" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetcuscontractupdatestatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetcuscontractupdatestatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upfilebyte">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="b" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Keystring" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upfilebyteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="upfilebyteResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="downfilebyte">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="downfilebyteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="downfilebyteResult" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEnclosurebystatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ccid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Keystring" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEnclosurebystatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEnclosurebystatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getusermidperm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Keystring" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetusermidpermResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetusermidpermResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getusermidpermds">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Keystring" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Manname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetusermidpermdsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetusermidpermdsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getmidlistds">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Keystring" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetmidlistdsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetmidlistdsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getmidfulllistds">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Keystring" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetmidfulllistdsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetmidfulllistdsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getmidfulllistdsbyuser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Keystring" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetmidfulllistdsbyuserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetmidfulllistdsbyuserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EASinsertseq">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Fnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ManW" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FmaterialNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Frequestqty" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EASinsertseqResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EASinsertseqResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getmidfulllistdsbyusermid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="mid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetmidfulllistdsbyusermidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetmidfulllistdsbyusermidResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getprolistbymiddt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="proname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetprolistbymiddtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetprolistbymiddtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getprolisthzbymiddt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="proname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetprolisthzbymiddtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetprolisthzbymiddtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getprolisthzpidstrdt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetprolisthzpidstrdtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetprolisthzpidstrdtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getproverbypiddt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="vername" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetproverbypiddtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetproverbypiddtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectCostcalculationzbdt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pidstr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="vid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="midful" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectCostcalculationzbdtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProjectCostcalculationzbdtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPermlistdt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="permcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPermlistdtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPermlistdtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getupdatepassdt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passold" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passnew" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passnew1" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetupdatepassdtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetupdatepassdtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEASYeardt">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEASYeardtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEASYeardtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEASqjdt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EASYear" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEASqjdtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEASqjdtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectLjzbsumdt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EASYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EASqjstr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pidstr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="midful" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectLjzbsumdtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProjectLjzbsumdtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetbankTypedt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetbankTypedtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetbankTypedtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetbankTypebymiddt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetbankTypebymiddtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetbankTypebymiddtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getbankfmsyunlistdt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="midful" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="banktypeid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetbankfmsyunlistdtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetbankfmsyunlistdtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getbankfmsyunlistviewdt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="banktypeid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="billdatestart" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="billdateend" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetbankfmsyunlistviewdtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetbankfmsyunlistviewdtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getbankfmshzyunlistdt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="midful" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetbankfmshzyunlistdtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetbankfmshzyunlistdtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getbankfmshzyunlistdt_new">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="midful_EAS" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getbankfmshzyunlistdt_newResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Getbankfmshzyunlistdt_newResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getbankfmshzyunlistviewdt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="billdatestart" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="billdateend" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetbankfmshzyunlistviewdtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetbankfmshzyunlistviewdtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getbankfmshzyunlistviewdt_new">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EASnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="billdatestart" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="billdateend" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getbankfmshzyunlistviewdt_newResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Getbankfmshzyunlistviewdt_newResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMana_MaPer_settlementdt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="midful" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EASqjstr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMana_MaPer_settlementdtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMana_MaPer_settlementdtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMana_KPI_settlementdt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="midful" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Yearstr" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Quarstr" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMana_KPI_settlementdtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMana_KPI_settlementdtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ProjectContract_PC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ccNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rownum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="midful" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ProjectContract_PCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ProjectContract_PCResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PS_Projectlist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="proName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="mid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PS_ProjectlistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_PS_ProjectlistResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PS_SettleRecordNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="proNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PS_SettleRecordNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_PS_SettleRecordNoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PS_ProjectProcessSettleRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="proid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="settlementNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rownum" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PS_ProjectProcessSettleRecordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_PS_ProjectProcessSettleRecordResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PS_SettleTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="mid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PS_SettleTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_PS_SettleTimeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ProjectCostcalculationzb_pid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="midful" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ProjectCostcalculationzb_pidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ProjectCostcalculationzb_pidResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ProjectMonzbsum_pid_EASqj">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="midful" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ProjectMonzbsum_pid_EASqjResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ProjectMonzbsum_pid_EASqjResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PS_ProjectShow">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rownum" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PS_ProjectShowResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_PS_ProjectShowResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Is_Acc_User">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_Is_Acc_UserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Is_Acc_UserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Out_Material">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="billdate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="EASnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="produnumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Out_MaterialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Out_MaterialResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_In_zd_Material">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="billdate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="EASnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="produnumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_In_zd_MaterialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_In_zd_MaterialResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_In_wg_Material">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="billdate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="EASnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="produnumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_In_wg_MaterialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_In_wg_MaterialResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Out__Material_SALE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="billdate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="EASnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="produnumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Out__Material_SALEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Out__Material_SALEResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_WareHouse_Num">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WareHouse_Number" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Me_Number" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_WareHouse_NumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_WareHouse_NumResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeixin_User_Insert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="weixin_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="beizhu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeixin_User_InsertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWeixin_User_InsertResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeixin_User_Sel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="weixin_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeixin_User_SelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWeixin_User_SelResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeixin_User_Sel_mid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="weixin_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeixin_User_Sel_midResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWeixin_User_Sel_midResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeixin_User_Sel_Number">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="weixin_id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Is_Sellet" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="mid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeixin_User_Sel_NumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWeixin_User_Sel_NumberResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeixin_User_Sel_list">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="weixin_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sel_Number" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeixin_User_Sel_listResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWeixin_User_Sel_listResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeixin_User_Sel_Cur">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="weixin_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeixin_User_Sel_CurResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWeixin_User_Sel_CurResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeixin_User_Sel_Cur_pro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="weixin_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeixin_User_Sel_Cur_proResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWeixin_User_Sel_Cur_proResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeixin_User_Sel_Cur_list">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="weixin_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeixin_User_Sel_Cur_listResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWeixin_User_Sel_Cur_listResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeixin_User_Man_list">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="weixin_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeixin_User_Man_listResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWeixin_User_Man_listResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeixin_Update_Sel_list">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Order_Sel_Bill_Number" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sellet_Number" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sel_Supper_Number" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeixin_Update_Sel_listResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetWeixin_Update_Sel_listResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetloginSoapIn">
+    <wsdl:part name="parameters" element="tns:Getlogin" />
+  </wsdl:message>
+  <wsdl:message name="GetloginSoapOut">
+    <wsdl:part name="parameters" element="tns:GetloginResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetlogindtSoapIn">
+    <wsdl:part name="parameters" element="tns:Getlogindt" />
+  </wsdl:message>
+  <wsdl:message name="GetlogindtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetlogindtResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Fmsbankview_NetSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Fmsbankview_Net" />
+  </wsdl:message>
+  <wsdl:message name="Get_Fmsbankview_NetSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Fmsbankview_NetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Fmsbankview_noNetSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Fmsbankview_noNet" />
+  </wsdl:message>
+  <wsdl:message name="Get_Fmsbankview_noNetSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Fmsbankview_noNetResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkflowlistMessagedtSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWorkflowlistMessagedt" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkflowlistMessagedtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWorkflowlistMessagedtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkflowlistMessagelistdtSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWorkflowlistMessagelistdt" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkflowlistMessagelistdtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWorkflowlistMessagelistdtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCRMPricelistdtSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCRMPricelistdt" />
+  </wsdl:message>
+  <wsdl:message name="GetCRMPricelistdtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCRMPricelistdtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCRMPricedtSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCRMPricedt" />
+  </wsdl:message>
+  <wsdl:message name="GetCRMPricedtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCRMPricedtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCRMPrice_zfdtSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCRMPrice_zfdt" />
+  </wsdl:message>
+  <wsdl:message name="GetCRMPrice_zfdtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCRMPrice_zfdtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCRMPricetoCRM_JsionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCRMPricetoCRM_Jsion" />
+  </wsdl:message>
+  <wsdl:message name="GetCRMPricetoCRM_JsionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCRMPricetoCRM_JsionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkflowlistsplistdtSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWorkflowlistsplistdt" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkflowlistsplistdtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWorkflowlistsplistdtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkflowlistspdtSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWorkflowlistspdt" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkflowlistspdtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWorkflowlistspdtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetareatableSoapIn">
+    <wsdl:part name="parameters" element="tns:Getareatable" />
+  </wsdl:message>
+  <wsdl:message name="GetareatableSoapOut">
+    <wsdl:part name="parameters" element="tns:GetareatableResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetcustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:Getcustomer" />
+  </wsdl:message>
+  <wsdl:message name="GetcustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetcustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetcustomerprojectSoapIn">
+    <wsdl:part name="parameters" element="tns:Getcustomerproject" />
+  </wsdl:message>
+  <wsdl:message name="GetcustomerprojectSoapOut">
+    <wsdl:part name="parameters" element="tns:GetcustomerprojectResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDistanceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDistance" />
+  </wsdl:message>
+  <wsdl:message name="GetDistanceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDistanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetcontractstuSoapIn">
+    <wsdl:part name="parameters" element="tns:Getcontractstu" />
+  </wsdl:message>
+  <wsdl:message name="GetcontractstuSoapOut">
+    <wsdl:part name="parameters" element="tns:GetcontractstuResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetconstructionstuSoapIn">
+    <wsdl:part name="parameters" element="tns:Getconstructionstu" />
+  </wsdl:message>
+  <wsdl:message name="GetconstructionstuSoapOut">
+    <wsdl:part name="parameters" element="tns:GetconstructionstuResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetcuscontractSoapIn">
+    <wsdl:part name="parameters" element="tns:Getcuscontract" />
+  </wsdl:message>
+  <wsdl:message name="GetcuscontractSoapOut">
+    <wsdl:part name="parameters" element="tns:GetcuscontractResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetcuscontractbyidSoapIn">
+    <wsdl:part name="parameters" element="tns:Getcuscontractbyid" />
+  </wsdl:message>
+  <wsdl:message name="GetcuscontractbyidSoapOut">
+    <wsdl:part name="parameters" element="tns:GetcuscontractbyidResponse" />
+  </wsdl:message>
+  <wsdl:message name="cuscontractintoSoapIn">
+    <wsdl:part name="parameters" element="tns:cuscontractinto" />
+  </wsdl:message>
+  <wsdl:message name="cuscontractintoSoapOut">
+    <wsdl:part name="parameters" element="tns:cuscontractintoResponse" />
+  </wsdl:message>
+  <wsdl:message name="cuscontractupdateSoapIn">
+    <wsdl:part name="parameters" element="tns:cuscontractupdate" />
+  </wsdl:message>
+  <wsdl:message name="cuscontractupdateSoapOut">
+    <wsdl:part name="parameters" element="tns:cuscontractupdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetcuscontractRbyidSoapIn">
+    <wsdl:part name="parameters" element="tns:GetcuscontractRbyid" />
+  </wsdl:message>
+  <wsdl:message name="GetcuscontractRbyidSoapOut">
+    <wsdl:part name="parameters" element="tns:GetcuscontractRbyidResponse" />
+  </wsdl:message>
+  <wsdl:message name="cuscontractRintoSoapIn">
+    <wsdl:part name="parameters" element="tns:cuscontractRinto" />
+  </wsdl:message>
+  <wsdl:message name="cuscontractRintoSoapOut">
+    <wsdl:part name="parameters" element="tns:cuscontractRintoResponse" />
+  </wsdl:message>
+  <wsdl:message name="cuscontractRupdateSoapIn">
+    <wsdl:part name="parameters" element="tns:cuscontractRupdate" />
+  </wsdl:message>
+  <wsdl:message name="cuscontractRupdateSoapOut">
+    <wsdl:part name="parameters" element="tns:cuscontractRupdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetcuscontractbyStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetcuscontractbyStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetcuscontractbyStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetcuscontractbyStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetcuscontractbyorderidSoapIn">
+    <wsdl:part name="parameters" element="tns:Getcuscontractbyorderid" />
+  </wsdl:message>
+  <wsdl:message name="GetcuscontractbyorderidSoapOut">
+    <wsdl:part name="parameters" element="tns:GetcuscontractbyorderidResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetcuscontractupdatestatusSoapIn">
+    <wsdl:part name="parameters" element="tns:Getcuscontractupdatestatus" />
+  </wsdl:message>
+  <wsdl:message name="GetcuscontractupdatestatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetcuscontractupdatestatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="upfilebyteSoapIn">
+    <wsdl:part name="parameters" element="tns:upfilebyte" />
+  </wsdl:message>
+  <wsdl:message name="upfilebyteSoapOut">
+    <wsdl:part name="parameters" element="tns:upfilebyteResponse" />
+  </wsdl:message>
+  <wsdl:message name="downfilebyteSoapIn">
+    <wsdl:part name="parameters" element="tns:downfilebyte" />
+  </wsdl:message>
+  <wsdl:message name="downfilebyteSoapOut">
+    <wsdl:part name="parameters" element="tns:downfilebyteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEnclosurebystatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEnclosurebystatus" />
+  </wsdl:message>
+  <wsdl:message name="GetEnclosurebystatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEnclosurebystatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetusermidpermSoapIn">
+    <wsdl:part name="parameters" element="tns:Getusermidperm" />
+  </wsdl:message>
+  <wsdl:message name="GetusermidpermSoapOut">
+    <wsdl:part name="parameters" element="tns:GetusermidpermResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetusermidpermdsSoapIn">
+    <wsdl:part name="parameters" element="tns:Getusermidpermds" />
+  </wsdl:message>
+  <wsdl:message name="GetusermidpermdsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetusermidpermdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetmidlistdsSoapIn">
+    <wsdl:part name="parameters" element="tns:Getmidlistds" />
+  </wsdl:message>
+  <wsdl:message name="GetmidlistdsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetmidlistdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetmidfulllistdsSoapIn">
+    <wsdl:part name="parameters" element="tns:Getmidfulllistds" />
+  </wsdl:message>
+  <wsdl:message name="GetmidfulllistdsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetmidfulllistdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetmidfulllistdsbyuserSoapIn">
+    <wsdl:part name="parameters" element="tns:Getmidfulllistdsbyuser" />
+  </wsdl:message>
+  <wsdl:message name="GetmidfulllistdsbyuserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetmidfulllistdsbyuserResponse" />
+  </wsdl:message>
+  <wsdl:message name="EASinsertseqSoapIn">
+    <wsdl:part name="parameters" element="tns:EASinsertseq" />
+  </wsdl:message>
+  <wsdl:message name="EASinsertseqSoapOut">
+    <wsdl:part name="parameters" element="tns:EASinsertseqResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetmidfulllistdsbyusermidSoapIn">
+    <wsdl:part name="parameters" element="tns:Getmidfulllistdsbyusermid" />
+  </wsdl:message>
+  <wsdl:message name="GetmidfulllistdsbyusermidSoapOut">
+    <wsdl:part name="parameters" element="tns:GetmidfulllistdsbyusermidResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetprolistbymiddtSoapIn">
+    <wsdl:part name="parameters" element="tns:Getprolistbymiddt" />
+  </wsdl:message>
+  <wsdl:message name="GetprolistbymiddtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetprolistbymiddtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetprolisthzbymiddtSoapIn">
+    <wsdl:part name="parameters" element="tns:Getprolisthzbymiddt" />
+  </wsdl:message>
+  <wsdl:message name="GetprolisthzbymiddtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetprolisthzbymiddtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetprolisthzpidstrdtSoapIn">
+    <wsdl:part name="parameters" element="tns:Getprolisthzpidstrdt" />
+  </wsdl:message>
+  <wsdl:message name="GetprolisthzpidstrdtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetprolisthzpidstrdtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetproverbypiddtSoapIn">
+    <wsdl:part name="parameters" element="tns:Getproverbypiddt" />
+  </wsdl:message>
+  <wsdl:message name="GetproverbypiddtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetproverbypiddtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectCostcalculationzbdtSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProjectCostcalculationzbdt" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectCostcalculationzbdtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProjectCostcalculationzbdtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPermlistdtSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPermlistdt" />
+  </wsdl:message>
+  <wsdl:message name="GetPermlistdtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPermlistdtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetupdatepassdtSoapIn">
+    <wsdl:part name="parameters" element="tns:Getupdatepassdt" />
+  </wsdl:message>
+  <wsdl:message name="GetupdatepassdtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetupdatepassdtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEASYeardtSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEASYeardt" />
+  </wsdl:message>
+  <wsdl:message name="GetEASYeardtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEASYeardtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEASqjdtSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEASqjdt" />
+  </wsdl:message>
+  <wsdl:message name="GetEASqjdtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEASqjdtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectLjzbsumdtSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProjectLjzbsumdt" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectLjzbsumdtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProjectLjzbsumdtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetbankTypedtSoapIn">
+    <wsdl:part name="parameters" element="tns:GetbankTypedt" />
+  </wsdl:message>
+  <wsdl:message name="GetbankTypedtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetbankTypedtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetbankTypebymiddtSoapIn">
+    <wsdl:part name="parameters" element="tns:GetbankTypebymiddt" />
+  </wsdl:message>
+  <wsdl:message name="GetbankTypebymiddtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetbankTypebymiddtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetbankfmsyunlistdtSoapIn">
+    <wsdl:part name="parameters" element="tns:Getbankfmsyunlistdt" />
+  </wsdl:message>
+  <wsdl:message name="GetbankfmsyunlistdtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetbankfmsyunlistdtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetbankfmsyunlistviewdtSoapIn">
+    <wsdl:part name="parameters" element="tns:Getbankfmsyunlistviewdt" />
+  </wsdl:message>
+  <wsdl:message name="GetbankfmsyunlistviewdtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetbankfmsyunlistviewdtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetbankfmshzyunlistdtSoapIn">
+    <wsdl:part name="parameters" element="tns:Getbankfmshzyunlistdt" />
+  </wsdl:message>
+  <wsdl:message name="GetbankfmshzyunlistdtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetbankfmshzyunlistdtResponse" />
+  </wsdl:message>
+  <wsdl:message name="Getbankfmshzyunlistdt_newSoapIn">
+    <wsdl:part name="parameters" element="tns:Getbankfmshzyunlistdt_new" />
+  </wsdl:message>
+  <wsdl:message name="Getbankfmshzyunlistdt_newSoapOut">
+    <wsdl:part name="parameters" element="tns:Getbankfmshzyunlistdt_newResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetbankfmshzyunlistviewdtSoapIn">
+    <wsdl:part name="parameters" element="tns:Getbankfmshzyunlistviewdt" />
+  </wsdl:message>
+  <wsdl:message name="GetbankfmshzyunlistviewdtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetbankfmshzyunlistviewdtResponse" />
+  </wsdl:message>
+  <wsdl:message name="Getbankfmshzyunlistviewdt_newSoapIn">
+    <wsdl:part name="parameters" element="tns:Getbankfmshzyunlistviewdt_new" />
+  </wsdl:message>
+  <wsdl:message name="Getbankfmshzyunlistviewdt_newSoapOut">
+    <wsdl:part name="parameters" element="tns:Getbankfmshzyunlistviewdt_newResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMana_MaPer_settlementdtSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMana_MaPer_settlementdt" />
+  </wsdl:message>
+  <wsdl:message name="GetMana_MaPer_settlementdtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMana_MaPer_settlementdtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMana_KPI_settlementdtSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMana_KPI_settlementdt" />
+  </wsdl:message>
+  <wsdl:message name="GetMana_KPI_settlementdtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMana_KPI_settlementdtResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ProjectContract_PCSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ProjectContract_PC" />
+  </wsdl:message>
+  <wsdl:message name="Get_ProjectContract_PCSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ProjectContract_PCResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_PS_ProjectlistSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_PS_Projectlist" />
+  </wsdl:message>
+  <wsdl:message name="Get_PS_ProjectlistSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_PS_ProjectlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_PS_SettleRecordNoSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_PS_SettleRecordNo" />
+  </wsdl:message>
+  <wsdl:message name="Get_PS_SettleRecordNoSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_PS_SettleRecordNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_PS_ProjectProcessSettleRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_PS_ProjectProcessSettleRecord" />
+  </wsdl:message>
+  <wsdl:message name="Get_PS_ProjectProcessSettleRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_PS_ProjectProcessSettleRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_PS_SettleTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_PS_SettleTime" />
+  </wsdl:message>
+  <wsdl:message name="Get_PS_SettleTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_PS_SettleTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ProjectCostcalculationzb_pidSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ProjectCostcalculationzb_pid" />
+  </wsdl:message>
+  <wsdl:message name="Get_ProjectCostcalculationzb_pidSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ProjectCostcalculationzb_pidResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ProjectMonzbsum_pid_EASqjSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ProjectMonzbsum_pid_EASqj" />
+  </wsdl:message>
+  <wsdl:message name="Get_ProjectMonzbsum_pid_EASqjSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ProjectMonzbsum_pid_EASqjResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_PS_ProjectShowSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_PS_ProjectShow" />
+  </wsdl:message>
+  <wsdl:message name="Get_PS_ProjectShowSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_PS_ProjectShowResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Is_Acc_UserSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Is_Acc_User" />
+  </wsdl:message>
+  <wsdl:message name="Get_Is_Acc_UserSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Is_Acc_UserResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Out_MaterialSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Out_Material" />
+  </wsdl:message>
+  <wsdl:message name="Get_Out_MaterialSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Out_MaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_In_zd_MaterialSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_In_zd_Material" />
+  </wsdl:message>
+  <wsdl:message name="Get_In_zd_MaterialSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_In_zd_MaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_In_wg_MaterialSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_In_wg_Material" />
+  </wsdl:message>
+  <wsdl:message name="Get_In_wg_MaterialSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_In_wg_MaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Out__Material_SALESoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Out__Material_SALE" />
+  </wsdl:message>
+  <wsdl:message name="Get_Out__Material_SALESoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Out__Material_SALEResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_WareHouse_NumSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_WareHouse_Num" />
+  </wsdl:message>
+  <wsdl:message name="Get_WareHouse_NumSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_WareHouse_NumResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWeixin_User_InsertSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWeixin_User_Insert" />
+  </wsdl:message>
+  <wsdl:message name="GetWeixin_User_InsertSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWeixin_User_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWeixin_User_SelSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWeixin_User_Sel" />
+  </wsdl:message>
+  <wsdl:message name="GetWeixin_User_SelSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWeixin_User_SelResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWeixin_User_Sel_midSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWeixin_User_Sel_mid" />
+  </wsdl:message>
+  <wsdl:message name="GetWeixin_User_Sel_midSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWeixin_User_Sel_midResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWeixin_User_Sel_NumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWeixin_User_Sel_Number" />
+  </wsdl:message>
+  <wsdl:message name="GetWeixin_User_Sel_NumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWeixin_User_Sel_NumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWeixin_User_Sel_listSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWeixin_User_Sel_list" />
+  </wsdl:message>
+  <wsdl:message name="GetWeixin_User_Sel_listSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWeixin_User_Sel_listResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWeixin_User_Sel_CurSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWeixin_User_Sel_Cur" />
+  </wsdl:message>
+  <wsdl:message name="GetWeixin_User_Sel_CurSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWeixin_User_Sel_CurResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWeixin_User_Sel_Cur_proSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWeixin_User_Sel_Cur_pro" />
+  </wsdl:message>
+  <wsdl:message name="GetWeixin_User_Sel_Cur_proSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWeixin_User_Sel_Cur_proResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWeixin_User_Sel_Cur_listSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWeixin_User_Sel_Cur_list" />
+  </wsdl:message>
+  <wsdl:message name="GetWeixin_User_Sel_Cur_listSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWeixin_User_Sel_Cur_listResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWeixin_User_Man_listSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWeixin_User_Man_list" />
+  </wsdl:message>
+  <wsdl:message name="GetWeixin_User_Man_listSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWeixin_User_Man_listResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWeixin_Update_Sel_listSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWeixin_Update_Sel_list" />
+  </wsdl:message>
+  <wsdl:message name="GetWeixin_Update_Sel_listSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWeixin_Update_Sel_listResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="Getlogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">登录校验</wsdl:documentation>
+      <wsdl:input message="tns:GetloginSoapIn" />
+      <wsdl:output message="tns:GetloginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getlogindt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">登录校验（datatable）</wsdl:documentation>
+      <wsdl:input message="tns:GetlogindtSoapIn" />
+      <wsdl:output message="tns:GetlogindtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Fmsbankview_Net">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">资金在线回款接收（datatable）</wsdl:documentation>
+      <wsdl:input message="tns:Get_Fmsbankview_NetSoapIn" />
+      <wsdl:output message="tns:Get_Fmsbankview_NetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Fmsbankview_noNet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">资金离线回款接收（datatable）</wsdl:documentation>
+      <wsdl:input message="tns:Get_Fmsbankview_noNetSoapIn" />
+      <wsdl:output message="tns:Get_Fmsbankview_noNetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowlistMessagedt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">流程审批获取审批记录（0 未审批，1 已审批）datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetWorkflowlistMessagedtSoapIn" />
+      <wsdl:output message="tns:GetWorkflowlistMessagedtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowlistMessagelistdt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">流程审批获取审批明细记录（明细浏览）datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetWorkflowlistMessagelistdtSoapIn" />
+      <wsdl:output message="tns:GetWorkflowlistMessagelistdtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCRMPricelistdt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据公司ID集合获取销售报价列表 datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetCRMPricelistdtSoapIn" />
+      <wsdl:output message="tns:GetCRMPricelistdtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCRMPricedt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据公司ID和项目编号获取销售报价明细 datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetCRMPricedtSoapIn" />
+      <wsdl:output message="tns:GetCRMPricedtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCRMPrice_zfdt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据公司ID和项目编号获取销售报价新版明细 datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetCRMPrice_zfdtSoapIn" />
+      <wsdl:output message="tns:GetCRMPrice_zfdtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCRMPricetoCRM_Jsion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据CRM项目编号获取销售报价明细Jsion</wsdl:documentation>
+      <wsdl:input message="tns:GetCRMPricetoCRM_JsionSoapIn" />
+      <wsdl:output message="tns:GetCRMPricetoCRM_JsionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowlistsplistdt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">流程审批（根据单据编号获取对应的审批明细）</wsdl:documentation>
+      <wsdl:input message="tns:GetWorkflowlistsplistdtSoapIn" />
+      <wsdl:output message="tns:GetWorkflowlistsplistdtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowlistspdt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">流程审批（同意，不同意）</wsdl:documentation>
+      <wsdl:input message="tns:GetWorkflowlistspdtSoapIn" />
+      <wsdl:output message="tns:GetWorkflowlistspdtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getareatable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取省份</wsdl:documentation>
+      <wsdl:input message="tns:GetareatableSoapIn" />
+      <wsdl:output message="tns:GetareatableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getcustomer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取客户信息</wsdl:documentation>
+      <wsdl:input message="tns:GetcustomerSoapIn" />
+      <wsdl:output message="tns:GetcustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getcustomerproject">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取产品（别墅）信息</wsdl:documentation>
+      <wsdl:input message="tns:GetcustomerprojectSoapIn" />
+      <wsdl:output message="tns:GetcustomerprojectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistance">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">运距信息</wsdl:documentation>
+      <wsdl:input message="tns:GetDistanceSoapIn" />
+      <wsdl:output message="tns:GetDistanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getcontractstu">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">合同状态信息</wsdl:documentation>
+      <wsdl:input message="tns:GetcontractstuSoapIn" />
+      <wsdl:output message="tns:GetcontractstuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getconstructionstu">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">施工状态信息</wsdl:documentation>
+      <wsdl:input message="tns:GetconstructionstuSoapIn" />
+      <wsdl:output message="tns:GetconstructionstuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getcuscontract">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取销售合同信息</wsdl:documentation>
+      <wsdl:input message="tns:GetcuscontractSoapIn" />
+      <wsdl:output message="tns:GetcuscontractSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getcuscontractbyid">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取销售合同信息</wsdl:documentation>
+      <wsdl:input message="tns:GetcuscontractbyidSoapIn" />
+      <wsdl:output message="tns:GetcuscontractbyidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cuscontractinto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">插入销售合同信息</wsdl:documentation>
+      <wsdl:input message="tns:cuscontractintoSoapIn" />
+      <wsdl:output message="tns:cuscontractintoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cuscontractupdate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新销售合同信息</wsdl:documentation>
+      <wsdl:input message="tns:cuscontractupdateSoapIn" />
+      <wsdl:output message="tns:cuscontractupdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetcuscontractRbyid">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据合同ID获取合同分录信息</wsdl:documentation>
+      <wsdl:input message="tns:GetcuscontractRbyidSoapIn" />
+      <wsdl:output message="tns:GetcuscontractRbyidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cuscontractRinto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">插入合同分录（订单）信息</wsdl:documentation>
+      <wsdl:input message="tns:cuscontractRintoSoapIn" />
+      <wsdl:output message="tns:cuscontractRintoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cuscontractRupdate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新合同分录（订单）信息</wsdl:documentation>
+      <wsdl:input message="tns:cuscontractRupdateSoapIn" />
+      <wsdl:output message="tns:cuscontractRupdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetcuscontractbyStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据订单业务状态获取订单信息（用户，管理单元ID，当前单据状态ID，是否选中）</wsdl:documentation>
+      <wsdl:input message="tns:GetcuscontractbyStatusSoapIn" />
+      <wsdl:output message="tns:GetcuscontractbyStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getcuscontractbyorderid">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据订单ID查询明细</wsdl:documentation>
+      <wsdl:input message="tns:GetcuscontractbyorderidSoapIn" />
+      <wsdl:output message="tns:GetcuscontractbyorderidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getcuscontractupdatestatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新状态</wsdl:documentation>
+      <wsdl:input message="tns:GetcuscontractupdatestatusSoapIn" />
+      <wsdl:output message="tns:GetcuscontractupdatestatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="upfilebyte">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">上传文件</wsdl:documentation>
+      <wsdl:input message="tns:upfilebyteSoapIn" />
+      <wsdl:output message="tns:upfilebyteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="downfilebyte">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">下载文件</wsdl:documentation>
+      <wsdl:input message="tns:downfilebyteSoapIn" />
+      <wsdl:output message="tns:downfilebyteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEnclosurebystatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询图片信息</wsdl:documentation>
+      <wsdl:input message="tns:GetEnclosurebystatusSoapIn" />
+      <wsdl:output message="tns:GetEnclosurebystatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getusermidperm">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询用户管理单元范围</wsdl:documentation>
+      <wsdl:input message="tns:GetusermidpermSoapIn" />
+      <wsdl:output message="tns:GetusermidpermSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getusermidpermds">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询用户管理单元范围（table）</wsdl:documentation>
+      <wsdl:input message="tns:GetusermidpermdsSoapIn" />
+      <wsdl:output message="tns:GetusermidpermdsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getmidlistds">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据管理单元ID查询管理单元信息（table）</wsdl:documentation>
+      <wsdl:input message="tns:GetmidlistdsSoapIn" />
+      <wsdl:output message="tns:GetmidlistdsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getmidfulllistds">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询所有公司数据（table）</wsdl:documentation>
+      <wsdl:input message="tns:GetmidfulllistdsSoapIn" />
+      <wsdl:output message="tns:GetmidfulllistdsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getmidfulllistdsbyuser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询用户有权限的公司数据（table）</wsdl:documentation>
+      <wsdl:input message="tns:GetmidfulllistdsbyuserSoapIn" />
+      <wsdl:output message="tns:GetmidfulllistdsbyuserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EASinsertseq">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EAS采购申请接入</wsdl:documentation>
+      <wsdl:input message="tns:EASinsertseqSoapIn" />
+      <wsdl:output message="tns:EASinsertseqSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getmidfulllistdsbyusermid">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询当前登录公司用户有权限的所有子级ID（table）</wsdl:documentation>
+      <wsdl:input message="tns:GetmidfulllistdsbyusermidSoapIn" />
+      <wsdl:output message="tns:GetmidfulllistdsbyusermidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getprolistbymiddt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取当前公司项目列表 datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetprolistbymiddtSoapIn" />
+      <wsdl:output message="tns:GetprolistbymiddtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getprolisthzbymiddt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取当前公司汇总项目列表 datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetprolisthzbymiddtSoapIn" />
+      <wsdl:output message="tns:GetprolisthzbymiddtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getprolisthzpidstrdt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取当前公司汇总项目ID集合 datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetprolisthzpidstrdtSoapIn" />
+      <wsdl:output message="tns:GetprolisthzpidstrdtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getproverbypiddt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据项目获取版本信息 datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetproverbypiddtSoapIn" />
+      <wsdl:output message="tns:GetproverbypiddtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectCostcalculationzbdt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取项目报价指标信息 datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetProjectCostcalculationzbdtSoapIn" />
+      <wsdl:output message="tns:GetProjectCostcalculationzbdtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPermlistdt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取当前用户权限信息 datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetPermlistdtSoapIn" />
+      <wsdl:output message="tns:GetPermlistdtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getupdatepassdt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">密码修改 datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetupdatepassdtSoapIn" />
+      <wsdl:output message="tns:GetupdatepassdtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEASYeardt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取会计年度信息 datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetEASYeardtSoapIn" />
+      <wsdl:output message="tns:GetEASYeardtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEASqjdt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取会计期间信息 datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetEASqjdtSoapIn" />
+      <wsdl:output message="tns:GetEASqjdtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectLjzbsumdt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据会计期间获取项目成本比对信息 datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetProjectLjzbsumdtSoapIn" />
+      <wsdl:output message="tns:GetProjectLjzbsumdtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetbankTypedt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">账户类型 datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetbankTypedtSoapIn" />
+      <wsdl:output message="tns:GetbankTypedtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetbankTypebymiddt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">对应公司显示的账户类型列表 datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetbankTypebymiddtSoapIn" />
+      <wsdl:output message="tns:GetbankTypebymiddtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getbankfmsyunlistdt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">资金分户列表 datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetbankfmsyunlistdtSoapIn" />
+      <wsdl:output message="tns:GetbankfmsyunlistdtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getbankfmsyunlistviewdt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">资金分户明细 datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetbankfmsyunlistviewdtSoapIn" />
+      <wsdl:output message="tns:GetbankfmsyunlistviewdtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getbankfmshzyunlistdt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">资金分户汇总列表 datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetbankfmshzyunlistdtSoapIn" />
+      <wsdl:output message="tns:GetbankfmshzyunlistdtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getbankfmshzyunlistdt_new">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">资金分户汇总列表 datatable</wsdl:documentation>
+      <wsdl:input message="tns:Getbankfmshzyunlistdt_newSoapIn" />
+      <wsdl:output message="tns:Getbankfmshzyunlistdt_newSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getbankfmshzyunlistviewdt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">资金分户汇总明细 datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetbankfmshzyunlistviewdtSoapIn" />
+      <wsdl:output message="tns:GetbankfmshzyunlistviewdtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getbankfmshzyunlistviewdt_new">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">资金分户汇总明细 datatable</wsdl:documentation>
+      <wsdl:input message="tns:Getbankfmshzyunlistviewdt_newSoapIn" />
+      <wsdl:output message="tns:Getbankfmshzyunlistviewdt_newSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMana_MaPer_settlementdt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">管理经营费用明细表 datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetMana_MaPer_settlementdtSoapIn" />
+      <wsdl:output message="tns:GetMana_MaPer_settlementdtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMana_KPI_settlementdt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">管理经营KPI考核表 datatable</wsdl:documentation>
+      <wsdl:input message="tns:GetMana_KPI_settlementdtSoapIn" />
+      <wsdl:output message="tns:GetMana_KPI_settlementdtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ProjectContract_PC">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">市场经营合同查询（datatable）</wsdl:documentation>
+      <wsdl:input message="tns:Get_ProjectContract_PCSoapIn" />
+      <wsdl:output message="tns:Get_ProjectContract_PCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_PS_Projectlist">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">市场经营项目查询（datatable）</wsdl:documentation>
+      <wsdl:input message="tns:Get_PS_ProjectlistSoapIn" />
+      <wsdl:output message="tns:Get_PS_ProjectlistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_PS_SettleRecordNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">市场经营结算单查询（datatable）</wsdl:documentation>
+      <wsdl:input message="tns:Get_PS_SettleRecordNoSoapIn" />
+      <wsdl:output message="tns:Get_PS_SettleRecordNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_PS_ProjectProcessSettleRecord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">市场经营结算汇总查询（datatable）</wsdl:documentation>
+      <wsdl:input message="tns:Get_PS_ProjectProcessSettleRecordSoapIn" />
+      <wsdl:output message="tns:Get_PS_ProjectProcessSettleRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_PS_SettleTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">市场经营项目回款分析（datatable）</wsdl:documentation>
+      <wsdl:input message="tns:Get_PS_SettleTimeSoapIn" />
+      <wsdl:output message="tns:Get_PS_SettleTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ProjectCostcalculationzb_pid">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取项目定价最新项目ID（datatable）</wsdl:documentation>
+      <wsdl:input message="tns:Get_ProjectCostcalculationzb_pidSoapIn" />
+      <wsdl:output message="tns:Get_ProjectCostcalculationzb_pidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ProjectMonzbsum_pid_EASqj">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取项目成本比对最新项目ID和期间（datatable）</wsdl:documentation>
+      <wsdl:input message="tns:Get_ProjectMonzbsum_pid_EASqjSoapIn" />
+      <wsdl:output message="tns:Get_ProjectMonzbsum_pid_EASqjSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_PS_ProjectShow">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取市场经营项目自助信息（datatable）</wsdl:documentation>
+      <wsdl:input message="tns:Get_PS_ProjectShowSoapIn" />
+      <wsdl:output message="tns:Get_PS_ProjectShowSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Is_Acc_User">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询问题圈受理用户（datatable）</wsdl:documentation>
+      <wsdl:input message="tns:Get_Is_Acc_UserSoapIn" />
+      <wsdl:output message="tns:Get_Is_Acc_UserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Out_Material">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EAS物料主管发料日报（datatable）</wsdl:documentation>
+      <wsdl:input message="tns:Get_Out_MaterialSoapIn" />
+      <wsdl:output message="tns:Get_Out_MaterialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_In_zd_Material">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EAS振捣操作员浇捣入库日报（datatable）</wsdl:documentation>
+      <wsdl:input message="tns:Get_In_zd_MaterialSoapIn" />
+      <wsdl:output message="tns:Get_In_zd_MaterialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_In_wg_Material">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EAS脱模操作员完工入库日报（datatable）</wsdl:documentation>
+      <wsdl:input message="tns:Get_In_wg_MaterialSoapIn" />
+      <wsdl:output message="tns:Get_In_wg_MaterialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Out__Material_SALE">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EAS运输主管发货日报（datatable）</wsdl:documentation>
+      <wsdl:input message="tns:Get_Out__Material_SALESoapIn" />
+      <wsdl:output message="tns:Get_Out__Material_SALESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_WareHouse_Num">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EAS实时库存查询（datatable）</wsdl:documentation>
+      <wsdl:input message="tns:Get_WareHouse_NumSoapIn" />
+      <wsdl:output message="tns:Get_WareHouse_NumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Insert">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">微信用户申请（string)</wsdl:documentation>
+      <wsdl:input message="tns:GetWeixin_User_InsertSoapIn" />
+      <wsdl:output message="tns:GetWeixin_User_InsertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Sel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">微信用户查询供应商结算汇总信息</wsdl:documentation>
+      <wsdl:input message="tns:GetWeixin_User_SelSoapIn" />
+      <wsdl:output message="tns:GetWeixin_User_SelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Sel_mid">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">微信用户根据微信ID查询结算公司信息</wsdl:documentation>
+      <wsdl:input message="tns:GetWeixin_User_Sel_midSoapIn" />
+      <wsdl:output message="tns:GetWeixin_User_Sel_midSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Sel_Number">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">微信用户查询供应商结算汇总信息(按结算单) true 已开票,false 未开票</wsdl:documentation>
+      <wsdl:input message="tns:GetWeixin_User_Sel_NumberSoapIn" />
+      <wsdl:output message="tns:GetWeixin_User_Sel_NumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Sel_list">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">微信用户查询供应商结算明细信息(按结算单)</wsdl:documentation>
+      <wsdl:input message="tns:GetWeixin_User_Sel_listSoapIn" />
+      <wsdl:output message="tns:GetWeixin_User_Sel_listSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Sel_Cur">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">微信用户查询客户结算汇总信息</wsdl:documentation>
+      <wsdl:input message="tns:GetWeixin_User_Sel_CurSoapIn" />
+      <wsdl:output message="tns:GetWeixin_User_Sel_CurSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Sel_Cur_pro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">微信用户查询客户结算项目汇总信息</wsdl:documentation>
+      <wsdl:input message="tns:GetWeixin_User_Sel_Cur_proSoapIn" />
+      <wsdl:output message="tns:GetWeixin_User_Sel_Cur_proSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Sel_Cur_list">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">微信用户查询客户结算明细信息</wsdl:documentation>
+      <wsdl:input message="tns:GetWeixin_User_Sel_Cur_listSoapIn" />
+      <wsdl:output message="tns:GetWeixin_User_Sel_Cur_listSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Man_list">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据微信ID查询用户所有的公司信息</wsdl:documentation>
+      <wsdl:input message="tns:GetWeixin_User_Man_listSoapIn" />
+      <wsdl:output message="tns:GetWeixin_User_Man_listSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_Update_Sel_list">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">微信用户根据采购结算ID(以,分隔)更新是否供应商确认状态</wsdl:documentation>
+      <wsdl:input message="tns:GetWeixin_Update_Sel_listSoapIn" />
+      <wsdl:output message="tns:GetWeixin_Update_Sel_listSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Getlogin">
+      <soap:operation soapAction="http://tempuri.org/Getlogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getlogindt">
+      <soap:operation soapAction="http://tempuri.org/Getlogindt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Fmsbankview_Net">
+      <soap:operation soapAction="http://tempuri.org/Get_Fmsbankview_Net" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Fmsbankview_noNet">
+      <soap:operation soapAction="http://tempuri.org/Get_Fmsbankview_noNet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowlistMessagedt">
+      <soap:operation soapAction="http://tempuri.org/GetWorkflowlistMessagedt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowlistMessagelistdt">
+      <soap:operation soapAction="http://tempuri.org/GetWorkflowlistMessagelistdt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCRMPricelistdt">
+      <soap:operation soapAction="http://tempuri.org/GetCRMPricelistdt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCRMPricedt">
+      <soap:operation soapAction="http://tempuri.org/GetCRMPricedt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCRMPrice_zfdt">
+      <soap:operation soapAction="http://tempuri.org/GetCRMPrice_zfdt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCRMPricetoCRM_Jsion">
+      <soap:operation soapAction="http://tempuri.org/GetCRMPricetoCRM_Jsion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowlistsplistdt">
+      <soap:operation soapAction="http://tempuri.org/GetWorkflowlistsplistdt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowlistspdt">
+      <soap:operation soapAction="http://tempuri.org/GetWorkflowlistspdt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getareatable">
+      <soap:operation soapAction="http://tempuri.org/Getareatable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getcustomer">
+      <soap:operation soapAction="http://tempuri.org/Getcustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getcustomerproject">
+      <soap:operation soapAction="http://tempuri.org/Getcustomerproject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistance">
+      <soap:operation soapAction="http://tempuri.org/GetDistance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getcontractstu">
+      <soap:operation soapAction="http://tempuri.org/Getcontractstu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getconstructionstu">
+      <soap:operation soapAction="http://tempuri.org/Getconstructionstu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getcuscontract">
+      <soap:operation soapAction="http://tempuri.org/Getcuscontract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getcuscontractbyid">
+      <soap:operation soapAction="http://tempuri.org/Getcuscontractbyid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cuscontractinto">
+      <soap:operation soapAction="http://tempuri.org/cuscontractinto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cuscontractupdate">
+      <soap:operation soapAction="http://tempuri.org/cuscontractupdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetcuscontractRbyid">
+      <soap:operation soapAction="http://tempuri.org/GetcuscontractRbyid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cuscontractRinto">
+      <soap:operation soapAction="http://tempuri.org/cuscontractRinto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cuscontractRupdate">
+      <soap:operation soapAction="http://tempuri.org/cuscontractRupdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetcuscontractbyStatus">
+      <soap:operation soapAction="http://tempuri.org/GetcuscontractbyStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getcuscontractbyorderid">
+      <soap:operation soapAction="http://tempuri.org/Getcuscontractbyorderid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getcuscontractupdatestatus">
+      <soap:operation soapAction="http://tempuri.org/Getcuscontractupdatestatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upfilebyte">
+      <soap:operation soapAction="http://tempuri.org/upfilebyte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downfilebyte">
+      <soap:operation soapAction="http://tempuri.org/downfilebyte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEnclosurebystatus">
+      <soap:operation soapAction="http://tempuri.org/GetEnclosurebystatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getusermidperm">
+      <soap:operation soapAction="http://tempuri.org/Getusermidperm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getusermidpermds">
+      <soap:operation soapAction="http://tempuri.org/Getusermidpermds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getmidlistds">
+      <soap:operation soapAction="http://tempuri.org/Getmidlistds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getmidfulllistds">
+      <soap:operation soapAction="http://tempuri.org/Getmidfulllistds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getmidfulllistdsbyuser">
+      <soap:operation soapAction="http://tempuri.org/Getmidfulllistdsbyuser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EASinsertseq">
+      <soap:operation soapAction="http://tempuri.org/EASinsertseq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getmidfulllistdsbyusermid">
+      <soap:operation soapAction="http://tempuri.org/Getmidfulllistdsbyusermid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getprolistbymiddt">
+      <soap:operation soapAction="http://tempuri.org/Getprolistbymiddt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getprolisthzbymiddt">
+      <soap:operation soapAction="http://tempuri.org/Getprolisthzbymiddt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getprolisthzpidstrdt">
+      <soap:operation soapAction="http://tempuri.org/Getprolisthzpidstrdt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getproverbypiddt">
+      <soap:operation soapAction="http://tempuri.org/Getproverbypiddt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectCostcalculationzbdt">
+      <soap:operation soapAction="http://tempuri.org/GetProjectCostcalculationzbdt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPermlistdt">
+      <soap:operation soapAction="http://tempuri.org/GetPermlistdt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getupdatepassdt">
+      <soap:operation soapAction="http://tempuri.org/Getupdatepassdt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEASYeardt">
+      <soap:operation soapAction="http://tempuri.org/GetEASYeardt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEASqjdt">
+      <soap:operation soapAction="http://tempuri.org/GetEASqjdt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectLjzbsumdt">
+      <soap:operation soapAction="http://tempuri.org/GetProjectLjzbsumdt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetbankTypedt">
+      <soap:operation soapAction="http://tempuri.org/GetbankTypedt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetbankTypebymiddt">
+      <soap:operation soapAction="http://tempuri.org/GetbankTypebymiddt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getbankfmsyunlistdt">
+      <soap:operation soapAction="http://tempuri.org/Getbankfmsyunlistdt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getbankfmsyunlistviewdt">
+      <soap:operation soapAction="http://tempuri.org/Getbankfmsyunlistviewdt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getbankfmshzyunlistdt">
+      <soap:operation soapAction="http://tempuri.org/Getbankfmshzyunlistdt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getbankfmshzyunlistdt_new">
+      <soap:operation soapAction="http://tempuri.org/Getbankfmshzyunlistdt_new" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getbankfmshzyunlistviewdt">
+      <soap:operation soapAction="http://tempuri.org/Getbankfmshzyunlistviewdt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getbankfmshzyunlistviewdt_new">
+      <soap:operation soapAction="http://tempuri.org/Getbankfmshzyunlistviewdt_new" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMana_MaPer_settlementdt">
+      <soap:operation soapAction="http://tempuri.org/GetMana_MaPer_settlementdt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMana_KPI_settlementdt">
+      <soap:operation soapAction="http://tempuri.org/GetMana_KPI_settlementdt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ProjectContract_PC">
+      <soap:operation soapAction="http://tempuri.org/Get_ProjectContract_PC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PS_Projectlist">
+      <soap:operation soapAction="http://tempuri.org/Get_PS_Projectlist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PS_SettleRecordNo">
+      <soap:operation soapAction="http://tempuri.org/Get_PS_SettleRecordNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PS_ProjectProcessSettleRecord">
+      <soap:operation soapAction="http://tempuri.org/Get_PS_ProjectProcessSettleRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PS_SettleTime">
+      <soap:operation soapAction="http://tempuri.org/Get_PS_SettleTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ProjectCostcalculationzb_pid">
+      <soap:operation soapAction="http://tempuri.org/Get_ProjectCostcalculationzb_pid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ProjectMonzbsum_pid_EASqj">
+      <soap:operation soapAction="http://tempuri.org/Get_ProjectMonzbsum_pid_EASqj" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PS_ProjectShow">
+      <soap:operation soapAction="http://tempuri.org/Get_PS_ProjectShow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Is_Acc_User">
+      <soap:operation soapAction="http://tempuri.org/Get_Is_Acc_User" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Out_Material">
+      <soap:operation soapAction="http://tempuri.org/Get_Out_Material" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_In_zd_Material">
+      <soap:operation soapAction="http://tempuri.org/Get_In_zd_Material" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_In_wg_Material">
+      <soap:operation soapAction="http://tempuri.org/Get_In_wg_Material" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Out__Material_SALE">
+      <soap:operation soapAction="http://tempuri.org/Get_Out__Material_SALE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_WareHouse_Num">
+      <soap:operation soapAction="http://tempuri.org/Get_WareHouse_Num" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Insert">
+      <soap:operation soapAction="http://tempuri.org/GetWeixin_User_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Sel">
+      <soap:operation soapAction="http://tempuri.org/GetWeixin_User_Sel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Sel_mid">
+      <soap:operation soapAction="http://tempuri.org/GetWeixin_User_Sel_mid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Sel_Number">
+      <soap:operation soapAction="http://tempuri.org/GetWeixin_User_Sel_Number" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Sel_list">
+      <soap:operation soapAction="http://tempuri.org/GetWeixin_User_Sel_list" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Sel_Cur">
+      <soap:operation soapAction="http://tempuri.org/GetWeixin_User_Sel_Cur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Sel_Cur_pro">
+      <soap:operation soapAction="http://tempuri.org/GetWeixin_User_Sel_Cur_pro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Sel_Cur_list">
+      <soap:operation soapAction="http://tempuri.org/GetWeixin_User_Sel_Cur_list" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Man_list">
+      <soap:operation soapAction="http://tempuri.org/GetWeixin_User_Man_list" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_Update_Sel_list">
+      <soap:operation soapAction="http://tempuri.org/GetWeixin_Update_Sel_list" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Getlogin">
+      <soap12:operation soapAction="http://tempuri.org/Getlogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getlogindt">
+      <soap12:operation soapAction="http://tempuri.org/Getlogindt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Fmsbankview_Net">
+      <soap12:operation soapAction="http://tempuri.org/Get_Fmsbankview_Net" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Fmsbankview_noNet">
+      <soap12:operation soapAction="http://tempuri.org/Get_Fmsbankview_noNet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowlistMessagedt">
+      <soap12:operation soapAction="http://tempuri.org/GetWorkflowlistMessagedt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowlistMessagelistdt">
+      <soap12:operation soapAction="http://tempuri.org/GetWorkflowlistMessagelistdt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCRMPricelistdt">
+      <soap12:operation soapAction="http://tempuri.org/GetCRMPricelistdt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCRMPricedt">
+      <soap12:operation soapAction="http://tempuri.org/GetCRMPricedt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCRMPrice_zfdt">
+      <soap12:operation soapAction="http://tempuri.org/GetCRMPrice_zfdt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCRMPricetoCRM_Jsion">
+      <soap12:operation soapAction="http://tempuri.org/GetCRMPricetoCRM_Jsion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowlistsplistdt">
+      <soap12:operation soapAction="http://tempuri.org/GetWorkflowlistsplistdt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowlistspdt">
+      <soap12:operation soapAction="http://tempuri.org/GetWorkflowlistspdt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getareatable">
+      <soap12:operation soapAction="http://tempuri.org/Getareatable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getcustomer">
+      <soap12:operation soapAction="http://tempuri.org/Getcustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getcustomerproject">
+      <soap12:operation soapAction="http://tempuri.org/Getcustomerproject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistance">
+      <soap12:operation soapAction="http://tempuri.org/GetDistance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getcontractstu">
+      <soap12:operation soapAction="http://tempuri.org/Getcontractstu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getconstructionstu">
+      <soap12:operation soapAction="http://tempuri.org/Getconstructionstu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getcuscontract">
+      <soap12:operation soapAction="http://tempuri.org/Getcuscontract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getcuscontractbyid">
+      <soap12:operation soapAction="http://tempuri.org/Getcuscontractbyid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cuscontractinto">
+      <soap12:operation soapAction="http://tempuri.org/cuscontractinto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cuscontractupdate">
+      <soap12:operation soapAction="http://tempuri.org/cuscontractupdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetcuscontractRbyid">
+      <soap12:operation soapAction="http://tempuri.org/GetcuscontractRbyid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cuscontractRinto">
+      <soap12:operation soapAction="http://tempuri.org/cuscontractRinto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cuscontractRupdate">
+      <soap12:operation soapAction="http://tempuri.org/cuscontractRupdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetcuscontractbyStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetcuscontractbyStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getcuscontractbyorderid">
+      <soap12:operation soapAction="http://tempuri.org/Getcuscontractbyorderid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getcuscontractupdatestatus">
+      <soap12:operation soapAction="http://tempuri.org/Getcuscontractupdatestatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upfilebyte">
+      <soap12:operation soapAction="http://tempuri.org/upfilebyte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downfilebyte">
+      <soap12:operation soapAction="http://tempuri.org/downfilebyte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEnclosurebystatus">
+      <soap12:operation soapAction="http://tempuri.org/GetEnclosurebystatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getusermidperm">
+      <soap12:operation soapAction="http://tempuri.org/Getusermidperm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getusermidpermds">
+      <soap12:operation soapAction="http://tempuri.org/Getusermidpermds" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getmidlistds">
+      <soap12:operation soapAction="http://tempuri.org/Getmidlistds" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getmidfulllistds">
+      <soap12:operation soapAction="http://tempuri.org/Getmidfulllistds" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getmidfulllistdsbyuser">
+      <soap12:operation soapAction="http://tempuri.org/Getmidfulllistdsbyuser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EASinsertseq">
+      <soap12:operation soapAction="http://tempuri.org/EASinsertseq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getmidfulllistdsbyusermid">
+      <soap12:operation soapAction="http://tempuri.org/Getmidfulllistdsbyusermid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getprolistbymiddt">
+      <soap12:operation soapAction="http://tempuri.org/Getprolistbymiddt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getprolisthzbymiddt">
+      <soap12:operation soapAction="http://tempuri.org/Getprolisthzbymiddt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getprolisthzpidstrdt">
+      <soap12:operation soapAction="http://tempuri.org/Getprolisthzpidstrdt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getproverbypiddt">
+      <soap12:operation soapAction="http://tempuri.org/Getproverbypiddt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectCostcalculationzbdt">
+      <soap12:operation soapAction="http://tempuri.org/GetProjectCostcalculationzbdt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPermlistdt">
+      <soap12:operation soapAction="http://tempuri.org/GetPermlistdt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getupdatepassdt">
+      <soap12:operation soapAction="http://tempuri.org/Getupdatepassdt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEASYeardt">
+      <soap12:operation soapAction="http://tempuri.org/GetEASYeardt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEASqjdt">
+      <soap12:operation soapAction="http://tempuri.org/GetEASqjdt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectLjzbsumdt">
+      <soap12:operation soapAction="http://tempuri.org/GetProjectLjzbsumdt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetbankTypedt">
+      <soap12:operation soapAction="http://tempuri.org/GetbankTypedt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetbankTypebymiddt">
+      <soap12:operation soapAction="http://tempuri.org/GetbankTypebymiddt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getbankfmsyunlistdt">
+      <soap12:operation soapAction="http://tempuri.org/Getbankfmsyunlistdt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getbankfmsyunlistviewdt">
+      <soap12:operation soapAction="http://tempuri.org/Getbankfmsyunlistviewdt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getbankfmshzyunlistdt">
+      <soap12:operation soapAction="http://tempuri.org/Getbankfmshzyunlistdt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getbankfmshzyunlistdt_new">
+      <soap12:operation soapAction="http://tempuri.org/Getbankfmshzyunlistdt_new" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getbankfmshzyunlistviewdt">
+      <soap12:operation soapAction="http://tempuri.org/Getbankfmshzyunlistviewdt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getbankfmshzyunlistviewdt_new">
+      <soap12:operation soapAction="http://tempuri.org/Getbankfmshzyunlistviewdt_new" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMana_MaPer_settlementdt">
+      <soap12:operation soapAction="http://tempuri.org/GetMana_MaPer_settlementdt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMana_KPI_settlementdt">
+      <soap12:operation soapAction="http://tempuri.org/GetMana_KPI_settlementdt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ProjectContract_PC">
+      <soap12:operation soapAction="http://tempuri.org/Get_ProjectContract_PC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PS_Projectlist">
+      <soap12:operation soapAction="http://tempuri.org/Get_PS_Projectlist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PS_SettleRecordNo">
+      <soap12:operation soapAction="http://tempuri.org/Get_PS_SettleRecordNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PS_ProjectProcessSettleRecord">
+      <soap12:operation soapAction="http://tempuri.org/Get_PS_ProjectProcessSettleRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PS_SettleTime">
+      <soap12:operation soapAction="http://tempuri.org/Get_PS_SettleTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ProjectCostcalculationzb_pid">
+      <soap12:operation soapAction="http://tempuri.org/Get_ProjectCostcalculationzb_pid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ProjectMonzbsum_pid_EASqj">
+      <soap12:operation soapAction="http://tempuri.org/Get_ProjectMonzbsum_pid_EASqj" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PS_ProjectShow">
+      <soap12:operation soapAction="http://tempuri.org/Get_PS_ProjectShow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Is_Acc_User">
+      <soap12:operation soapAction="http://tempuri.org/Get_Is_Acc_User" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Out_Material">
+      <soap12:operation soapAction="http://tempuri.org/Get_Out_Material" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_In_zd_Material">
+      <soap12:operation soapAction="http://tempuri.org/Get_In_zd_Material" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_In_wg_Material">
+      <soap12:operation soapAction="http://tempuri.org/Get_In_wg_Material" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Out__Material_SALE">
+      <soap12:operation soapAction="http://tempuri.org/Get_Out__Material_SALE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_WareHouse_Num">
+      <soap12:operation soapAction="http://tempuri.org/Get_WareHouse_Num" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Insert">
+      <soap12:operation soapAction="http://tempuri.org/GetWeixin_User_Insert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Sel">
+      <soap12:operation soapAction="http://tempuri.org/GetWeixin_User_Sel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Sel_mid">
+      <soap12:operation soapAction="http://tempuri.org/GetWeixin_User_Sel_mid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Sel_Number">
+      <soap12:operation soapAction="http://tempuri.org/GetWeixin_User_Sel_Number" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Sel_list">
+      <soap12:operation soapAction="http://tempuri.org/GetWeixin_User_Sel_list" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Sel_Cur">
+      <soap12:operation soapAction="http://tempuri.org/GetWeixin_User_Sel_Cur" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Sel_Cur_pro">
+      <soap12:operation soapAction="http://tempuri.org/GetWeixin_User_Sel_Cur_pro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Sel_Cur_list">
+      <soap12:operation soapAction="http://tempuri.org/GetWeixin_User_Sel_Cur_list" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_User_Man_list">
+      <soap12:operation soapAction="http://tempuri.org/GetWeixin_User_Man_list" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeixin_Update_Sel_list">
+      <soap12:operation soapAction="http://tempuri.org/GetWeixin_Update_Sel_list" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://192.168.11.96:7781/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://192.168.11.96:7781/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

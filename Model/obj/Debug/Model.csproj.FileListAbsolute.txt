@@ -1,0 +1,5 @@
+E:\Code\HRweb\Model\bin\Debug\Model.dll
+E:\Code\HRweb\Model\bin\Debug\Model.pdb
+E:\Code\HRweb\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+E:\Code\HRweb\Model\obj\Debug\Model.dll
+E:\Code\HRweb\Model\obj\Debug\Model.pdb

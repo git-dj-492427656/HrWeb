@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/Images/bais.ico" media="screen" />
+
+    <!-- Bootstrap -->
+    <link href="~/Scripts/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="~/Scripts/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="~/Scripts/vendors/nprogress/nprogress.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="~/Scripts/build/css/custom.min.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-md">
+    <div class="container body" style="overflow:hidden;">
+        <div class="main_container">
+            <!-- 侧边导航 -->
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+
+                    <div class="navbar nav_title" style="border: 2px #ffd800;">
+                        <a href="../Main/Index" class="site_title"><img src="~/Images/logo.png" alt="" /><span>&nbsp;@ViewBag.ComName</span></a>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <br />
+
+                    <!-- 菜单栏 -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <!--<h3>菜单1</h3>-->
+                            <ul class="nav side-menu">
+
+                                <li>
+                                    <a><i class="fa fa-group"></i> 异构数据源 <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="../Hrm/Hr_PcMaker_ghys">PcMaker规划预算</a></li>
+                                        <li><a href="../Hrm/Hr_PcMaker_xmjz">PcMaker项目进展</a></li>
+                                        <li><a href="../Hrm/Hr_PcMaker_fact">PcMaker实际</a></li>
+                                        <li><a href="../Hrm/Hr_Bais_ghys">Bais规划预算</a></li>
+                                        <li><a href="../Hrm/Hr_Bais_xmjz">Bais项目进展</a></li>
+                                        <li><a href="../Hrm/Hr_Bais_fact">Bais实际</a></li>
+                                        <li><a href="../Hrm/Hr_Bais_rgsr">Bais人工收入</a></li>
+                                        <li><a href="../Hrm/Hr_Bais_rgzc">Bais人工支出</a></li>
+                                        <li><a href="../Hrm/Hr_Crm_ghys">Crm规划预算</a></li>
+                                        <li><a href="../Hrm/Hr_Crm_fact">Crm实际</a></li>
+                                        <li><a href="../Hrm/Hr_Crm_tzys">Crm调整预算</a></li>
+                                        <li><a href="../Hrm/Hr_Bhr_fact">Bhr实际</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a><i class="fa fa-object-group"></i> 岗位配备规则 <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="../Hrm/Hr_Rule_ys">营收规则</a></li>
+                                        <li><a href="../Hrm/Hr_Rule_ht">合同规则</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a><i class="fa fa-soccer-ball-o"></i> 中间编码对照 <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="../Hrm/Hr_Middle_sys">异构系统编码</a></li>
+                                        <li><a href="../Hrm/Hr_Middle_rule">岗位配备编码</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a><i class="fa fa-user-plus"></i> 中间表数据 <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="../Hrm/Hr_Midghys">规划预算</a></li>
+                                        <li><a href="../Hrm/Hr_Midtzys">调整预算</a></li>
+                                        <li><a href="../Hrm/Hr_Midxmjz">项目进展</a></li>
+                                        <li><a href="../Hrm/Hr_Midfact">实际</a></li>
+                                        <li><a href="../Hrm/Hr_Midysrs">非市场人数</a></li>
+                                        <li><a href="../Hrm/Hr_Midhtrs">市场人数</a></li>
+                                        <li><a href="../Hrm/Hr_Midrgsr">人工收入预算</a></li>
+                                        <li><a href="../Hrm/Hr_Midrgzc">人工支出预算</a></li>
+                                        <li><a href="../Hrm/Hr_Midrgsj">人工支出实际</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a><i class="fa fa-trophy"></i> 人力模型 <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="../Hrm/Hr_Model">HRM调整预算</a></li>
+                                        <li><a href="../Hrm/Hr_ModelPro">HRM项目进展</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- /sidebar menu -->
+                    <!-- 菜单底部按钮 -->
+                    <div class="sidebar-footer hidden-small">
+                        <a data-toggle="tooltip" data-placement="top" title="Settings">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                            <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Lock">
+                            <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Logout" href="../Home/Login">
+                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                    <!-- /menu footer buttons -->
+                </div>
+            </div>
+
+            <!-- 上部导航 -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav>
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <span class="glyphicon glyphicon-user padding-right-small" style="position:relative;top: 2px;">@ViewBag.Name</span>
+                                    <span class="fa fa-angle-down"></span>
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                    <li><a href="#"><span style="color: rgb(236, 165, 101);font-weight:bold;">公司：</span><span id="comName" style="color: rgb(253, 163, 166);font-weight:bold;">@ViewBag.ComName</span></a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="../Main/EditPwd" style="font-weight:bold;">修改密码</a></li>
+                                    <li><a href="../Main/EditCom" style="font-weight:bold;">组织切换</a></li>
+                                    <li><a href="../Main/About" style="font-weight:bold;">关于</a></li>
+                                    <li><a href="../Main/Logout" style="font-weight:bold;"><i class="fa fa-sign-out pull-right"></i>退出</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="../Main/Index"><span class="glyphicon glyphicon-home">主页</span></a></li>
+                        </ul>
+
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+            <!-- 主页内容 -->
+            <div class="right_col" role="main">
+
+                @RenderBody()                
+
+            </div>
+            <!-- /page content -->
+            <!-- 页脚 -->
+            <footer>
+                <div class="pull-right">
+                    <a href="../Main/Index" target="_self" title="远大住工">gis.bhome</a>
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+        </div>
+    </div>
+    
+    <!-- Bootstrap -->
+    <script src="~/Scripts/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- NProgress -->
+    <script src="~/Scripts/vendors/nprogress/nprogress.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="~/Scripts/build/js/custom.min.js"></script>
+
+
+</body>
+
+
+</html>
+
+

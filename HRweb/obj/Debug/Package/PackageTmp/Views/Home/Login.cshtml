@@ -1,0 +1,174 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/Images/bais.ico" media="screen" />
+    <!-- Default -->
+    <link href="~/Scripts/login/css/style.default.css" rel="stylesheet" />
+
+    <!-- Bootstrap -->
+    <link href="~/Scripts/vendors/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="~/Scripts/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+
+</head>
+
+<body class="loginpage">
+    <div class="loginbox">
+        <div class="loginboxinner">
+
+            <div class="logo">
+                <h1 class="logo"><img src="~/Images/logo.png"><span style="color:#f2f0f0;">&nbsp;&nbsp;远大住工</span><span class="slogan" style="font-size:16px;color:#f2f0f0;">&nbsp;&nbsp;MAIS</span></h1>
+
+                <span class="slogan" style="color:#f6941b;font-size:9px;font-style:oblique;">Manufacture Artificial Intelligence System</span>
+            </div>
+
+            <br clear="all" /><br />
+
+            <form method="post">
+
+                <div class="username">
+                    <div class="usernameinner">
+                        <input type="text" name="username" id="username" />
+                    </div>
+                </div>
+
+                <div class="password">
+                    <div class="passwordinner">
+                        <input type="password" name="password" id="password" />
+                    </div>
+                </div>
+
+                <button type="button" id="btnLogin">登&nbsp;&nbsp;录</button>
+
+                <div class="keep">
+                    <label>
+                        <input type="checkbox" id="isCheck" style="vertical-align: text-bottom;" />
+                        <span style="vertical-align: middle;">记住密码</span>
+                    </label>
+                    <input type="hidden" name="status" id="status" value="0" />
+                </div>
+
+            </form>            
+
+        </div>
+    </div>
+
+    <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false" data-keyboard="false">
+        <div class="modal-dialog" style="height:50px;" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="myModalLabel">登录提示：</h4>
+                </div>
+                <div class="modal-body">
+                    <span id="result" style="color:red;"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" style="margin-right:20px;">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="~/Scripts/vendors/jquery/dist/jquery.js"></script>
+    <script src="~/Scripts/vendors/jquery/dist/jquery.form.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="~/Scripts/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+    <script type="text/javascript">
+
+        $(function () {
+                       
+            var check = '@ViewBag.Check';
+
+            if ("1" == check) {
+
+                $('#username').val('@ViewBag.Name');
+                $('#password').val('@ViewBag.Pwd');
+                $('#status').val(check);
+
+                $('#isCheck').attr('checked', true);
+            }
+            else {
+                $('#username').val('');
+                $('#password').val('');
+                $('#status').val('0');
+
+                $('#isCheck').attr('checked', false);
+
+                $('#username').focus();
+            }
+
+        });
+
+        $("input[type='checkbox']").click(function () {
+
+            var ischeck = $("input[type='checkbox']").is(':checked');
+            if (ischeck) {
+                $('#status').val('1');
+            }
+            else {
+                $('#status').val('0');
+            }
+        });
+        
+
+        //登录
+        $('#btnLogin').click(function () {
+
+            var ischeck = $("input[type='checkbox']").is(':checked');
+            if (ischeck) {
+                $('#status').val('1');
+            }
+            else {
+                $('#status').val('0');
+            }
+
+            $.ajax({
+                type: 'POST',
+                url: '../Home/LoginBtn',
+                data: { username: $('#username').val(), password: $('#password').val(), status: $('#status').val() },
+                success: function (data) {
+
+                    var json = eval("(" + data + ")");
+                    
+                    if (json.result) {
+
+                        window.location = json.url;
+                    }
+                    else {
+
+                        $('#result').html(json.msg);
+                        $("#myModal").modal("show");
+                    }
+                }
+            });
+        });
+
+
+    </script>
+
+    <style>
+        #myModal {
+            top: 20%;
+        }
+    </style>
+
+</body>
+
+</html>
+

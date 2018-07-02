@@ -1,0 +1,89 @@
+﻿
+/*** 日期选择css **/
+.form_datetime {
+    width: 120px;
+    height: 30px;
+    padding: 3px 9px 3px 9px;
+    margin: 5px 5px 5px 5px;
+    border: 1px solid #ccc;
+}
+
+/*.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+}*/
+
+.tblStyle {
+    height: auto;
+    width: 98%;
+    margin: 2px 2px 2px 2px;
+}
+
+    .tblStyle td {
+        width: auto;
+        height: 35px;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+    }
+
+        .tblStyle td input {
+            width: 100px;
+            padding: 3px 9px 3px 9px;
+            border: 1px solid #ccc;
+        }
+
+.tblStyle2 {
+    height: auto;
+    width: 98%;
+    margin: 2px 2px 2px 2px;
+}
+
+    .tblStyle2 td {
+        width: auto;
+        height: 27px;
+        text-align: center;
+        border: 1px solid #ccc;
+    }
+    
+
+/*** 同步数据页面css **/
+.selectStyle {
+    width: 150px;
+    height: 30px;
+    padding: 3px 9px 3px 9px;
+    margin: 2px 5px 2px 5px;
+    border: 1px solid #ccc;
+}
+
+.selectStyle2 {
+    width: 80px;
+    height: 27px;
+    padding: 3px 9px 3px 9px;
+    margin: 5px 5px 2px 5px;
+    border: 1px solid #ccc;
+}
+
+.btnDiv {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+    .btnDiv p {
+        height: 35px;
+        border-bottom: 1px solid #E4E4E4;
+    }
+
+        .btnDiv p select {
+            width: 100px;
+            height: 27px;
+            padding: 3px 9px 3px 9px;
+            border: 1px solid #ccc;
+        }
+
+.msgDiv {
+    width: 100%;
+    color: red;
+    text-align: right;
+}

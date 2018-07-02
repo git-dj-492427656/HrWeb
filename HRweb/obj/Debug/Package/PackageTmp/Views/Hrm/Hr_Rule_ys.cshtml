@@ -1,0 +1,163 @@
+﻿
+@{
+    ViewBag.Title = "岗位配备规则-营收";
+}
+
+<!-- Bootstrap-table -->
+<link href="~/Scripts/bootstrp-table/bootstrap-table.css" rel="stylesheet" />
+<!-- datetimepicker -->
+<link href="~/Scripts/bootstrap-datetime/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+<!-- fileinput -->
+<link href="~/Scripts/fileinput/css/fileinput.min.css" rel="stylesheet" />
+
+<!-- Custom Theme Style -->
+<link href="~/Scripts/build/css/custom.min.css" rel="stylesheet">
+
+<link href="~/Scripts/Hrm/css/hrmStyle.css" rel="stylesheet" />
+
+<style>
+    #myModal {
+        top: 20%;
+    }
+
+</style>
+
+<!-- 数据信息 -->
+<div class="row" id="mainData">
+
+    <!-- 查询 -->
+    <div class="x_panel">
+        <div class="x_title">
+            <a class="collapse-link">
+                <span style="color:#250486;font-size:14px;font-weight:bold;">查询条件：</span>
+                <span class="pull-right"><i class="fa fa-chevron-up"></i></span>
+            </a>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <form class="form-horizontal form-label-left" novalidate>
+
+                <div class="item form-group">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        年 度：
+                        <select class="selectStyle" id="yearly"></select>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- 数据 -->
+    <div class="x_panel">
+        <div class="x_title">
+            <div class="pull-left">
+                <div class="btn-group">
+                    <span class="btn btn-default btn-sm">菜单：</span>
+                    <a href="#" id="btnImp" class="btn btn-default btn-sm"><i class="fa fa-file-excel-o"></i>&nbsp;导入</a>
+                    <a href="#" id="btnExp" class="btn btn-default btn-sm"><i class="fa fa-print"></i>&nbsp;导出</a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <div class="row top_tiles" id="colData">
+                
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- 上传导入 -->
+<div class="row" id="import" style="display:none;">
+    <div class="x_panel">
+        <div class="x_title">
+            <span style="color:#250486;font-size:14px;font-weight:bold;">导入数据>></span>
+            <a href="#" id="btnBack2">
+                <span class="pull-right"><i class="fa fa-mail-reply"></i></span>
+            </a>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <div class="col-md-2 col-sm-2 col-xs-12"></div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+
+                上传文件：
+                <div class="form-group">
+                    <input id="file_upload" type="file" multiple class="file" data-overwrite-initial="false" data-min-file-count="1" data-max-file-count="1">
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-xs-12"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false" data-keyboard="false">
+    <div class="modal-dialog" style="height:50px;" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel">提示：</h4>
+            </div>
+            <div class="modal-body">
+                <span id="result" style="color:red;"></span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal" style="margin-right:20px;"><i class="fa fa-check"></i>&nbsp;确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- jQuery -->
+<script src="~/Scripts/vendors/jquery/dist/jquery.min.js"></script>
+
+<!-- Bootstrap-table -->
+<script src="~/Scripts/bootstrp-table/bootstrap-table.js"></script>
+<script src="~/Scripts/bootstrp-table/bootstrap-table-zh-CN.js"></script>
+<!-- fileinput -->
+<script src="~/Scripts/fileinput/fileinput.js"></script>
+<script src="~/Scripts/fileinput/fileinput_locale_zh.js"></script>
+
+<script src="~/Scripts/Hrm/js/Hr_Rule_ys.js"></script>
+
+<script>
+
+    $(function () {
+
+        jsObject.Setted.init();
+    });
+
+    //上传文件
+    $("#file_upload").fileinput({
+        language: 'zh',         //设置语言
+        uploadUrl: '../Hrm/UploadExcel',    // 后台上传地址
+        uploadExtraData: { "uploadType": 'Rule_ys' },     //上传时额外参数
+        allowedFileExtensions: ['xls', 'xlsx'],     //允许接收的文件后缀
+        showUpload: true,           //是否显示上传按钮
+        showCaption: false,         //是否显示标题
+        overwriteInitial: false,
+        maxFileSize: 10000,         //单位为kb，如果为0表示不限制文件大小
+        maxFilesNum: 1,            //最多文件数量
+        //allowedFileTypes: ['image', 'video', 'flash'], //允许上传文件类型
+        slugCallback: function (filename) {
+            return filename.replace('(', '_').replace(']', '_');
+        }
+    });
+
+</script>
+
+
+
+
